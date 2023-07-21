@@ -1,0 +1,195 @@
+/* Page Background Dynamic CSS */
+
+.Foggy {
+    background: url('../img/fog.jpg')no-repeat center center/cover;
+}
+
+.Sunny {
+    background: url('../img/clear.jpg')no-repeat center center/cover;
+}
+
+.Cloudy {
+    background: url('../img/cloudy.jpg')no-repeat center center/cover;
+}
+
+.Snow {
+    background: url('../img/snow.jpeg')no-repeat center center/cover;
+}
+
+.Rainy {
+    background: url('../img/rainy.jpg')no-repeat center center/cover;
+}
+
+.Partly-cloudy-day {
+    background: url('../img/cloudy-sun.jpg')no-repeat center center/cover;
+}
+
+.Partly-cloudy-night {
+    background: url('../img/cloudy-night.jpg')no-repeat center center/cover;
+}
+
+.Clear-night {
+    background: url('../img/clear-night.jpeg')no-repeat center center/cover;
+}
+
+.Thunder {
+    background: url('../img/thunder.jpeg')no-repeat center center/cover;
+}
+
+.Thunder_rain {
+    background: url('../img/rain-and-thunder.jpg')no-repeat center center/cover;
+}
+
+/* Page background Static CSS */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Info Static CSS */
+
+.info {
+    min-height: 60%;
+    width: 35%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Info Dynamic CSS */
+
+/* Info Dynamic Background CSS */
+
+.dark-bg {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.dark-dark-bg {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.light-bg {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Info Dynamic Text CSS */
+
+.dark-txt {
+    color: black;
+}
+.light-txt {
+    color: white;
+}
+
+/* Info Components CSS */
+
+.input {
+    width: 100%;
+}
+
+form {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input input {
+    padding: 5px;
+    font-size: 20px;
+    opacity: 0.53;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    outline: none;
+}
+
+.input input:active {
+    /* color: black; */
+    border: none;
+    opacity: 1;
+}
+
+.weather-icon img {
+    width: 100%;
+}
+
+.weather-type {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.temperature {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.city-name {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0 5px 0;
+}
+
+.weather-details-box {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    border-radius: 20px;
+    margin: 12px 0;
+}
+
+.weather-details {
+    display: inline-block;
+    width: 40%;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 850px) {
+    .info {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .info {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .weather-details {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .weather-details-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .weather-details {
+        width: 80%;
+        font-size: 22px;
+    }
+}
