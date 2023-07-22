@@ -103,12 +103,14 @@ const Page = () => {
         e.target.value = '';
     }
 
+    const apiKey = process.env.REACT_APP_API_KEY;
+
     const fetchWeatherData = async (city) => {
         const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=' + city;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'd6b34b2815msh32fa81d5735e0abp179a63jsn84105497861e',
+                'X-RapidAPI-Key': apiKey,
                 'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             }
         };
