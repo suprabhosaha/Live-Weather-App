@@ -138,7 +138,8 @@ form {
 .city-name {
     font-size: 40px;
     font-weight: bold;
-    margin: 20px 0 5px 0;
+    margin: 20px 10px 5px 10px;
+    text-align: center;
 }
 
 .weather-details-box {
@@ -174,15 +175,12 @@ form {
     .info {
         width: 80%;
     }
-}
-
-@media screen and (max-width: 360px) {
     .weather-details {
         font-size: 18px;
     }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 420px) {
     .weather-details-box {
         flex-direction: column;
         text-align: center;
@@ -190,6 +188,6 @@ form {
 
     .weather-details {
         width: 80%;
-        font-size: 22px;
+        font-size: 20px;
     }
 }
