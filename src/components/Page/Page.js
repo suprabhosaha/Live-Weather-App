@@ -26,7 +26,7 @@ const Page = () => {
     const [humiditydata, setHumiditydata] = useState(null);
     const [uvdata, setUvdata] = useState(null);
 
-    const [isday, setisDay] = useState('1');
+    const [isday, setisDay] = useState(null);
 
     const handlebg = (weathertype) => {
         if (weathertype === 'Sunny') {
@@ -55,7 +55,7 @@ const Page = () => {
             setInfotxt('light-txt');
             setWeathericon(Rain);
         } else if (weathertype === 'Partly cloudy') {
-            if (isday === '1') {
+            if (isday === 1) {
                 setPagebg('Partly-cloudy-day');
                 setInfobg('dark-bg');
                 setInfotxt('light-txt');
@@ -103,12 +103,14 @@ const Page = () => {
         e.target.value = '';
     }
 
+    const apiKey = process.env.REACT_APP_API_KEY;
+
     const fetchWeatherData = async (city) => {
         const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=' + city;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'd6b34b2815msh32fa81d5735e0abp179a63jsn84105497861e',
+                'X-RapidAPI-Key': apiKey,
                 'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             }
         };
